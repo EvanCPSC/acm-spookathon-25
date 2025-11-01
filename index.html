@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaman's Symbols</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<script>
+    const cards = [
+        "Spider Egg\n\nNew beginnings - Innocence",
+        "Blood Crescent\n\nResourcefulness - Power",
+        "White Pumpkin\n\nIntuition - Subconcious Mind",
+        "Owl\n\nNurturing - Beauty",
+        "Haunted House\n\nAuthority - Establishment",
+        "Half Full Cauldron\n\nWisdom - Tradition",
+        "Pumpkin Pie\n\nHarmony - Choices"
+    ]
+    function showCards() {
+        const rand1 =  Math.floor(Math.random() * 6);
+        document.getElementById(card1).innerHTML = cards[rand1];
+        const rand2 = Math.floor(Math.random() * 6);
+        document.getElementById(card1).innerHTML = cards[rand2];
+        const rand3 = Math.floor(Math.random() * 6);
+        document.getElementById(card1).innerHTML = cards[rand3];
+    }
+</script>
+<body>
+    <h1>Find Your Destiny</h1>
+    <button onclick="showCards()">Click me to find out</button><br /><br /><br />
+    <div class="cardsdiv">
+        <div class="card">
+            <p id="card1"></p>
+        </div>
+        <div class="card">
+            <p id="card2"></p>
+        </div>
+        <div class="card">
+            <p id="card3"></p>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background-color: rgb(16, 6, 82);
+        color: rgb(234, 153, 33);
+        text-align: center;
+        font-family: "Creepster", system-ui;
+    }
+    p {
+        color: rgb(234, 153, 33);
+    }
+    button {
+        padding: 10px;
+        font-family: "Creepster", system-ui;
+        background-color: orange;
+        border-radius: 10px;
+    }
+    .cardsdiv {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        max-width: 60%;
+    }
+    .card {
+        margin: auto;
+        background: black;
+        width: 100px;
+        height: 300px;
+        padding: 50px;
+    }
+</style>
+</html>
