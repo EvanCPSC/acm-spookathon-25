@@ -12,21 +12,25 @@
 </head>
 <script>
     const cards = [
-        "Spider Egg\n\nNew beginnings - Innocence",
-        "Blood Crescent\n\nResourcefulness - Power",
-        "White Pumpkin\n\nIntuition - Subconcious Mind",
-        "Owl\n\nNurturing - Beauty",
-        "Haunted House\n\nAuthority - Establishment",
-        "Half Full Cauldron\n\nWisdom - Tradition",
-        "Pumpkin Pie\n\nHarmony - Choices"
+        "-- Spider Egg --\nNew beginnings / Innocence",
+        "-- Blood Crescent --\nResourcefulness / Power",
+        "-- White Pumpkin --\nIntuition / Subconcious Mind",
+        "-- Owl --\nNurturing / Beauty",
+        "-- Haunted House --\nAuthority / Establishment",
+        "-- Half Full Cauldron --\nWisdom / Tradition",
+        "-- Pumpkin Pie --\nHarmony / Choices"
     ]
     function showCards() {
+        let cardscopy = [...cards]
         const rand1 =  Math.floor(Math.random() * 6);
-        document.getElementById(card1).innerHTML = cards[rand1];
-        const rand2 = Math.floor(Math.random() * 6);
-        document.getElementById(card1).innerHTML = cards[rand2];
-        const rand3 = Math.floor(Math.random() * 6);
-        document.getElementById(card1).innerHTML = cards[rand3];
+        document.getElementById("card1").innerHTML = cardscopy[rand1];
+        cardscopy.splice(rand1, 1)
+        const rand2 = Math.floor(Math.random() * 5);
+        document.getElementById("card2").innerHTML = cardscopy[rand2];
+        cardscopy.splice(rand2, 1)
+        const rand3 = Math.floor(Math.random() * 4);
+        document.getElementById("card3").innerHTML = cardscopy[rand3];
+        cardscopy.splice(rand3, 1)
     }
 </script>
 <body>
@@ -34,13 +38,13 @@
     <button onclick="showCards()">Click me to find out</button><br /><br /><br />
     <div class="cardsdiv">
         <div class="card">
-            <p id="card1"></p>
+            <p id="card1">?</p>
         </div>
         <div class="card">
-            <p id="card2"></p>
+            <p id="card2">?</p>
         </div>
         <div class="card">
-            <p id="card3"></p>
+            <p id="card3">?</p>
         </div>
     </div>
 </body>
@@ -70,7 +74,7 @@
         margin: auto;
         background: black;
         width: 100px;
-        height: 300px;
+        height: 200px;
         padding: 50px;
     }
 </style>
